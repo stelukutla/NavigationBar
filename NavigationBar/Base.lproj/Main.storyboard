@@ -1,22 +1,65 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9052" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9040"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NavigationBar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lCa-T1-ECS">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="rVB-M3-55e"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Title" id="PLI-7v-3iI">
+                                        <barButtonItem key="backBarButtonItem" title="Back" id="ZwN-8X-5WG"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="d2w-A3-wi6"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ExT-NR-fK2"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="Yck-dl-2jl">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="0iw-qt-Ldl"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="bookmarks" id="Frb-Dz-YWz"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="n0U-Vg-EwN"/>
+                                    <barButtonItem systemItem="action" id="BLt-Gx-NXb"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="NIj-7P-1y2"/>
+                                    <barButtonItem systemItem="organize" id="iXX-Zf-H3P"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="cIC-E9-Mhe"/>
+                                    <barButtonItem systemItem="trash" id="aD6-Pj-bCv"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Yck-dl-2jl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="4Ra-8x-HOO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lCa-T1-ECS" secondAttribute="trailing" constant="-20" id="GY7-zH-hB3"/>
+                            <constraint firstItem="lCa-T1-ECS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ffX-nO-21p"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Yck-dl-2jl" secondAttribute="bottom" id="gfP-Rf-mLh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Yck-dl-2jl" secondAttribute="trailing" constant="-20" id="obE-V6-ODR"/>
+                            <constraint firstItem="lCa-T1-ECS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="ptK-KA-qo2"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
